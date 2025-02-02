@@ -22,9 +22,9 @@ jobs:
       - name: Build Terraform Provider
         run: |
           go mod tidy
-          go build -o terraform-provider-custom
+          go build -o terraform-provider-rce
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: terraform-provider-custom
+          files: terraform-provider-rce
